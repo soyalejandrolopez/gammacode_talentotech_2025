@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Empty Orders</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4CAF50" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#4CAF50" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFA000" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFA000" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Empty-Orders" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Background" fill="url(#linearGradient-1)" cx="100" cy="100" r="100"></circle>
+        <g id="Shopping-Cart" transform="translate(40.000000, 40.000000)">
+            <path d="M110,30 L110,100 C110,105.523 105.523,110 100,110 L20,110 C14.477,110 10,105.523 10,100 L10,30 C10,24.477 14.477,20 20,20 L100,20 C105.523,20 110,24.477 110,30 Z" id="Cart-Body" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M110,30 L110,40 L10,40 L10,30 C10,24.477 14.477,20 20,20 L100,20 C105.523,20 110,24.477 110,30 Z" id="Cart-Top" fill="#4CAF50" fill-rule="nonzero"></path>
+            <circle id="Wheel-1" fill="#8D6E63" cx="35" cy="120" r="10"></circle>
+            <circle id="Wheel-2" fill="#8D6E63" cx="85" cy="120" r="10"></circle>
+            <rect id="Handle" fill="#8D6E63" x="55" y="0" width="10" height="20" rx="5"></rect>
+            <path d="M30,60 L90,60" id="Line-1" stroke="#EEEEEE" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M30,75 L90,75" id="Line-2" stroke="#EEEEEE" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M30,90 L70,90" id="Line-3" stroke="#EEEEEE" stroke-width="4" stroke-linecap="round"></path>
+            <circle id="Empty-Badge" fill="url(#linearGradient-2)" cx="90" cy="90" r="20"></circle>
+            <g id="Empty-Icon" transform="translate(80.000000, 80.000000)" fill="#FFA000" fill-rule="nonzero">
+                <path d="M20,0 C20,11.046 11.046,20 0,20 C-11.046,20 -20,11.046 -20,0 C-20,-11.046 -11.046,-20 0,-20 C11.046,-20 20,-11.046 20,0 Z M-2,-10 L2,-10 L2,2 L-2,2 L-2,-10 Z M-2,6 L2,6 L2,10 L-2,10 L-2,6 Z" id="Empty-Symbol"></path>
+            </g>
+        </g>
+    </g>
+</svg>

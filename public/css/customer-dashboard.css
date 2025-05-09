@@ -1,0 +1,436 @@
+/* Customer Dashboard Styles */
+
+/* Stats Card */
+.stat-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.stat-icon-primary {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+}
+
+.stat-icon-secondary {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #FFC107;
+}
+
+.stat-icon-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.stat-icon-danger {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.stat-label {
+    color: #78909C;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.stat-trend {
+    font-size: 0.8rem;
+    color: #4CAF50;
+    display: flex;
+    align-items: center;
+}
+
+.stat-trend i {
+    margin-right: 5px;
+}
+
+/* Modern Table */
+.modern-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.modern-table thead th {
+    background-color: #F5F7FA;
+    color: #546E7A;
+    font-weight: 600;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ECEFF1;
+    font-size: 0.9rem;
+}
+
+.modern-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ECEFF1;
+    color: #37474F;
+    vertical-align: middle;
+}
+
+.modern-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.modern-table tbody tr:hover {
+    background-color: rgba(236, 239, 241, 0.4);
+}
+
+/* Modern Badge */
+.modern-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-primary {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: #2196F3;
+}
+
+.badge-secondary {
+    background-color: rgba(156, 39, 176, 0.1);
+    color: #9C27B0;
+}
+
+.badge-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.badge-danger {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+.badge-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #FFC107;
+}
+
+.badge-info {
+    background-color: rgba(0, 188, 212, 0.1);
+    color: #00BCD4;
+}
+
+/* Order Card */
+.order-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.order-card-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-card-title {
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.order-card-title i {
+    margin-right: 10px;
+}
+
+.order-card-body {
+    padding: 20px;
+}
+
+.order-card-footer {
+    padding: 15px 20px;
+    background-color: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-card-header {
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+    color: white;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #ECEFF1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #B0BEC5;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profile-role {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.profile-card-body {
+    padding: 20px;
+}
+
+.profile-info-item {
+    margin-bottom: 15px;
+}
+
+.profile-info-label {
+    font-size: 0.8rem;
+    color: #78909C;
+    margin-bottom: 5px;
+}
+
+.profile-info-value {
+    font-weight: 500;
+}
+
+/* Button Styles */
+.btn-modern {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-modern-primary {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    color: white;
+}
+
+.btn-modern-secondary {
+    background: linear-gradient(135deg, #FFC107, #FFA000);
+    color: white;
+}
+
+.btn-modern-success {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: white;
+}
+
+.btn-modern-danger {
+    background: linear-gradient(135deg, #F44336, #D32F2F);
+    color: white;
+}
+
+.btn-modern-outline {
+    background: transparent;
+    border: 2px solid #ECEFF1;
+    color: #546E7A;
+    box-shadow: none;
+}
+
+.btn-modern-outline:hover {
+    background-color: #F5F7FA;
+    border-color: #CFD8DC;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(37, 211, 102, 0.3);
+    color: white;
+}
+
+.btn-whatsapp i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Form Styles */
+.form-modern .form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #546E7A;
+}
+
+.form-modern .form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #ECEFF1;
+    transition: all 0.3s;
+}
+
+.form-modern .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+    border-color: #2196F3;
+}
+
+.form-modern .form-text {
+    font-size: 0.8rem;
+    color: #78909C;
+    margin-top: 5px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ECEFF1;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #BBDEFB;
+}
+
+.timeline-item-success:before {
+    background-color: #4CAF50;
+    box-shadow: 0 0 0 2px #C8E6C9;
+}
+
+.timeline-item-warning:before {
+    background-color: #FFC107;
+    box-shadow: 0 0 0 2px #FFECB3;
+}
+
+.timeline-item-danger:before {
+    background-color: #F44336;
+    box-shadow: 0 0 0 2px #FFCDD2;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: #78909C;
+    margin-bottom: 5px;
+}
+
+.timeline-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-text {
+    color: #546E7A;
+    font-size: 0.9rem;
+}

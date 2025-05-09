@@ -1,0 +1,312 @@
+/**
+ * Estilos 3D para el Dashboard de Productor - AgroGastro
+ * Versión 2.0 - Colores de la bandera de Colombia
+ */
+
+:root {
+    /* Paleta de colores - Bandera de Colombia */
+    --yellow: #FFC107; /* Amarillo */
+    --yellow-light: #FFE082;
+    --yellow-dark: #FFA000;
+    --blue: #0D47A1; /* Azul */
+    --blue-light: #1976D2;
+    --blue-dark: #0D47A1;
+    --red: #D32F2F; /* Rojo */
+    --red-light: #EF5350;
+    --red-dark: #B71C1C;
+    
+    /* Colores de estado */
+    --success: #66BB6A;
+    --success-light: rgba(102, 187, 106, 0.15);
+    --warning: #FFC107;
+    --warning-light: rgba(255, 193, 7, 0.15);
+    --danger: #F44336;
+    --danger-light: rgba(244, 67, 54, 0.15);
+    --info: #2196F3;
+    --info-light: rgba(33, 150, 243, 0.15);
+    
+    /* Colores de fondo */
+    --bg-light: #F5F5F5;
+    --bg-dark: #263238;
+    --card-bg: #FFFFFF;
+    --sidebar-bg: #0D47A1; /* Azul oscuro */
+    --sidebar-active: #1565C0;
+    
+    /* Dimensiones */
+    --sidebar-width: 260px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 70px;
+    --footer-height: 60px;
+    --border-radius: 10px;
+    --transition-speed: 0.3s;
+    
+    /* Sombras 3D */
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout principal con fondo de bandera de Colombia */
+.producer-dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+        rgba(255, 193, 7, 0.15) 0%, /* Amarillo */
+        rgba(255, 193, 7, 0.15) 33.33%,
+        rgba(13, 71, 161, 0.15) 33.33%, /* Azul */
+        rgba(13, 71, 161, 0.15) 66.66%,
+        rgba(211, 47, 47, 0.15) 66.66%, /* Rojo */
+        rgba(211, 47, 47, 0.15) 100%
+    ), var(--bg-light);
+    transition: all var(--transition-speed);
+    position: relative;
+}
+
+/* Decoración de fondo tricolor - Bandera de Colombia */
+.producer-dashboard-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right,
+        var(--yellow) 0%,
+        var(--yellow) 50%,
+        var(--blue) 50%,
+        var(--blue) 75%,
+        var(--red) 75%,
+        var(--red) 100%
+    );
+    z-index: 1100;
+}
+
+/* Sidebar con efecto 3D */
+.producer-sidebar {
+    width: var(--sidebar-width);
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: white;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all var(--transition-speed);
+    z-index: 1000;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tarjetas 3D */
+.modern-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-speed);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transform: perspective(1000px) rotateX(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.modern-card:hover {
+    transform: perspective(1000px) rotateX(2deg);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.modern-card-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+    position: relative;
+    z-index: 1;
+}
+
+.modern-card-body {
+    padding: 1.25rem;
+    position: relative;
+    z-index: 0;
+}
+
+/* Tarjetas de estadísticas 3D */
+.stat-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-speed);
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px) rotateY(0deg);
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: perspective(1000px) rotateY(5deg);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    filter: blur(8px);
+    opacity: 0.7;
+    z-index: -1;
+    transform: scale(0.8);
+}
+
+.stat-icon-primary {
+    background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
+}
+
+.stat-icon-secondary {
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+}
+
+.stat-icon-info {
+    background: linear-gradient(135deg, var(--blue-light), var(--blue));
+}
+
+.stat-icon-warning {
+    background: linear-gradient(135deg, var(--red-light), var(--red));
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #333;
+    text-shadow: var(--text-shadow);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.stat-trend {
+    font-size: 0.8rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.stat-trend i {
+    margin-right: 0.5rem;
+}
+
+.trend-positive {
+    color: var(--success);
+}
+
+.trend-negative {
+    color: var(--danger);
+}
+
+/* Tablas modernas */
+.modern-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.modern-table th {
+    background-color: rgba(0, 0, 0, 0.02);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modern-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    vertical-align: middle;
+}
+
+.modern-table tr:last-child td {
+    border-bottom: none;
+}
+
+.modern-table tr:hover td {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Badges con efecto 3D */
+.modern-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.badge-success {
+    background: linear-gradient(135deg, var(--success), #43A047);
+    color: white;
+}
+
+.badge-warning {
+    background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
+    color: #333;
+}
+
+.badge-info {
+    background: linear-gradient(135deg, var(--blue-light), var(--blue));
+    color: white;
+}
+
+.badge-danger {
+    background: linear-gradient(135deg, var(--red-light), var(--red));
+    color: white;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}

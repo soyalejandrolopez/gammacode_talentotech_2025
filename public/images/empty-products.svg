@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Empty Products</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4CAF50" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#4CAF50" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFA000" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFA000" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Empty-Products" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Background" fill="url(#linearGradient-1)" cx="100" cy="100" r="100"></circle>
+        <g id="Box" transform="translate(40.000000, 40.000000)">
+            <path d="M110,30 L110,100 C110,105.523 105.523,110 100,110 L20,110 C14.477,110 10,105.523 10,100 L10,30 L110,30 Z" id="Box-Body" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M120,20 L120,30 L0,30 L0,20 C0,14.477 4.477,10 10,10 L110,10 C115.523,10 120,14.477 120,20 Z" id="Box-Top" fill="#4CAF50" fill-rule="nonzero"></path>
+            <path d="M60,0 L60,10 L40,10 L40,0 L60,0 Z" id="Box-Handle" fill="#8D6E63" fill-rule="nonzero"></path>
+            <path d="M30,50 L90,50" id="Line-1" stroke="#EEEEEE" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M30,70 L90,70" id="Line-2" stroke="#EEEEEE" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M30,90 L70,90" id="Line-3" stroke="#EEEEEE" stroke-width="4" stroke-linecap="round"></path>
+            <circle id="Empty-Badge" fill="url(#linearGradient-2)" cx="90" cy="90" r="20"></circle>
+            <g id="Empty-Icon" transform="translate(80.000000, 80.000000)" fill="#FFA000" fill-rule="nonzero">
+                <path d="M20,0 C20,11.046 11.046,20 0,20 C-11.046,20 -20,11.046 -20,0 C-20,-11.046 -11.046,-20 0,-20 C11.046,-20 20,-11.046 20,0 Z M-2,-10 L2,-10 L2,2 L-2,2 L-2,-10 Z M-2,6 L2,6 L2,10 L-2,10 L-2,6 Z" id="Empty-Symbol"></path>
+            </g>
+        </g>
+    </g>
+</svg>
